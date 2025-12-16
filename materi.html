@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BioSMA — Tumbuhan</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#2b6cb0;
+  --secondary:#2c7a7b;
+  --accent:#68d391;
+  --bg:#f7fbff;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(180deg,#f7fbff,#e6f0fa);
+  color:#1a202c;
+}
+header{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff;
+  padding:3rem 1rem;
+  text-align:center;
+}
+header h1{margin:0;font-size:2.2rem}
+header p{opacity:.9}
+nav{
+  position:sticky;top:0;z-index:10;
+  background:#ffffffcc;
+  backdrop-filter:blur(10px);
+  display:flex;justify-content:center;gap:1.2rem;
+  padding:.8rem;
+  box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+nav a{
+  text-decoration:none;
+  font-weight:600;
+  color:var(--primary);
+  padding:.4rem .8rem;
+  border-radius:999px;
+  transition:.3s;
+}
+nav a:hover,nav a.active{background:var(--accent);color:#064e3b}
+section{
+  max-width:1100px;
+  margin:3rem auto;
+  padding:0 1.2rem;
+}
+.card{
+  background:var(--card);
+  border-radius:18px;
+  padding:1.5rem 1.8rem;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  margin-bottom:2rem;
+  animation:fadeUp .7s ease both;
+}
+h2{color:var(--primary);margin-top:0}
+h3{color:var(--secondary)}
+ul{margin-left:1.2rem}
+.badge{
+  display:inline-block;
+  background:var(--accent);
+  color:#064e3b;
+  padding:.2rem .6rem;
+  border-radius:8px;
+  font-size:.8rem;
+  margin-left:.4rem;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:1.2rem;
+}
+.box{
+  background:#f0f9ff;
+  border-left:5px solid var(--primary);
+  padding:1rem;
+  border-radius:12px;
+}
+button{
+  background:var(--primary);
+  color:#fff;
+  border:none;
+  padding:.6rem 1rem;
+  border-radius:10px;
+  font-weight:600;
+  cursor:pointer;
+}
+button:hover{background:#1e4f91}
+.toggle{display:none}
+table{
+  width:100%;border-collapse:collapse;margin-top:1rem
+}
+th,td{
+  padding:.7rem;border:1px solid #cbd5e1
+}
+th{background:var(--primary);color:#fff}
+footer{
+  text-align:center;
+  padding:2rem 1rem;
+  background:#0f172a;
+  color:#cbd5e1
+}
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>🌿 BioSMA</h1>
+  <p>Media pembelajaran Biologi SMA • Materi Tumbuhan</p>
+</header>
+<nav>
+  <a href="#pengertian">Pengertian</a>
+  <a href="#struktur">Struktur</a>
+  <a href="#klasifikasi">Klasifikasi</a>
+  <a href="#fungsi">Fungsi</a>
+  <a href="#contoh">Contoh</a>
+</nav>
+<section id="pengertian">
+  <div class="card">
+    <h2>Pengertian Tumbuhan</h2>
+    <p>Tumbuhan adalah organisme eukariotik yang bersifat <b>autotrof</b>, mampu membuat makanan sendiri melalui fotosintesis.</p>
+    <h3>Ciri-ciri <span class="badge">Penting</span></h3>
+    <ul>
+      <li>Memiliki klorofil</li>
+      <li>Dinding sel dari selulosa</li>
+      <li>Autotrof</li>
+      <li>Tidak berpindah tempat</li>
+    </ul>
+  </div>
+</section>
+<section id="struktur">
+  <div class="card">
+    <h2>Struktur Tumbuhan</h2>
+    <div class="grid">
+      <div class="box"><h3>Akar</h3><p>Menyerap air & mineral serta menopang tubuh tumbuhan.</p></div>
+      <div class="box"><h3>Batang</h3><p>Menyalurkan zat makanan dan menopang daun & bunga.</p></div>
+      <div class="box"><h3>Daun</h3><p>Tempat utama fotosintesis.</p></div>
+      <div class="box"><h3>Bunga</h3><p>Alat perkembangbiakan generatif.</p></div>
+    </div>
+  </div>
+</section>
+<section id="klasifikasi">
+  <div class="card">
+    <h2>Klasifikasi Tumbuhan</h2>
+    <button onclick="toggle('klas')">Tampilkan / Sembunyikan</button>
+    <div id="klas" class="toggle">
+      <ul>
+        <li>Bryophyta – Lumut</li>
+        <li>Pteridophyta – Paku</li>
+        <li>Gymnospermae – Pinus</li>
+        <li>Angiospermae – Tumbuhan berbunga</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section id="fungsi">
+  <div class="card">
+    <h2>Fungsi Tumbuhan</h2>
+    <ul>
+      <li>Sumber makanan</li>
+      <li>Penghasil oksigen</li>
+      <li>Menjaga keseimbangan ekosistem</li>
+      <li>Sumber obat dan industri</li>
+    </ul>
+  </div>
+</section>
+<section id="contoh">
+  <div class="card">
+    <h2>Contoh Tumbuhan</h2>
+    <table>
+      <tr><th>Klasifikasi</th><th>Contoh</th></tr>
+      <tr><td>Bryophyta</td><td>Lumut</td></tr>
+      <tr><td>Pteridophyta</td><td>Pakis</td></tr>
+      <tr><td>Monokotil</td><td>Padi, Jagung</td></tr>
+      <tr><td>Dikotil</td><td>Mangga</td></tr>
+    </table>
+  </div>
+</section>
+<footer>
+  <p>© 2025 BioSMA • Media Belajar Biologi SMA</p>
+</footer>
+<script>
+function toggle(id){
+  const el=document.getElementById(id);
+  el.style.display = el.style.display==='block' ? 'none':'block';
+}
+const links=document.querySelectorAll('nav a');
+window.addEventListener('scroll',()=>{
+  let fromTop=window.scrollY+80;
+  links.forEach(link=>{
+    const section=document.querySelector(link.getAttribute('href'));
+    if(section.offsetTop<=fromTop && section.offsetTop+section.offsetHeight>fromTop){
+      link.classList.add('active');
+    }else link.classList.remove('active');
+  });
+});
+</script>
+</body>
+</html>

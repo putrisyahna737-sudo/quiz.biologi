@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIO-PELAJAR</title>
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* BACKGROUND HIDUP */
+    body {
+      background:
+        radial-gradient(circle at top left, #2ecc71, transparent 40%),
+        radial-gradient(circle at bottom right, #27ae60, transparent 40%),
+        linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      min-height: 100vh;
+    }
+
+    /* NAVBAR */
+    header {
+      background: #ffffff;
+      padding: 18px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: #2ecc71;
+    }
+
+    nav a {
+      margin-left: 28px;
+      text-decoration: none;
+      color: #555;
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a.active,
+    nav a:hover {
+      color: #2ecc71;
+    }
+
+    nav a.active::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background: #f39c12;
+      bottom: -8px;
+      left: 0;
+      border-radius: 5px;
+    }
+
+    /* CONTAINER FLOATING */
+    .container {
+      background: rgba(245, 246, 250, 0.96);
+      padding: 60px 70px 80px;
+      border-radius: 30px;
+      margin: 40px auto;
+      max-width: 1100px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      height: 260px;
+      border-radius: 25px;
+      overflow: hidden;
+      margin-bottom: 50px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+      animation: fadeUp 0.8s ease;
+    }
+
+    .hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        rgba(0,0,0,0.65),
+        rgba(0,0,0,0.3)
+      );
+    }
+
+    .hero-text {
+      position: absolute;
+      bottom: 35px;
+      left: 35px;
+      color: #fff;
+      z-index: 1;
+    }
+
+    .hero-text h1 {
+      font-size: 30px;
+      font-weight: 700;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 30px;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      transition: 0.3s;
+      animation: fadeUp 1s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card h3 {
+      color: #2ecc71;
+      margin-bottom: 12px;
+      font-size: 18px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .card ul {
+      list-style: none;
+      font-size: 14px;
+    }
+
+    .card ul li {
+      margin-bottom: 10px;
+      padding-left: 15px;
+      position: relative;
+    }
+
+    .card ul li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: #2ecc71;
+      font-size: 18px;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #ffffff;
+      font-size: 14px;
+      color: #777;
+      box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* ANIMASI */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .container {
+        padding: 40px 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <div class="logo">WEB BIOLOGI SMA</div>
+    <nav>
+      <a href="#" class="active">Beranda</a>
+      <a href="materi.html">Materi</a>
+      <a href="quiz.html">quiz</a>
+    </nav>
+  </header>
+
+  
+  <div class="container">
+
+
+    <section class="hero">
+      <img src="gambar/Lab.jpg" alt="Biologi" class="hero-img">
+      <div class="hero-text">
+        <h1>SELAMAT DATANG!</h1>
+        <p>Jelajahi Dunia Biologi</p>
+      </div>
+    </section>
+
+    <!-- GRID -->
+    <section class="grid">
+      <div class="card">
+        <h3>Materi Pembelajaran</h3>
+        <p>Ringkasan bab, modul interaktif & video edukasi</p>
+      </div>
+
+      <div class="card">
+        <h3>Ayo latihan quiz</h3>
+        <p>Simulasi praktikum & proyek penelitian</p>
+      </div>
+
+      <div class="card">
+        <h3>Berita Terbaru</h3>
+        <ul>
+          <li>15 Okt - Lomba Karya Ilmiah</li>
+          <li>10 Okt - Studi Lapangan</li>
+          <li>5 Okt - Olimpiade Biologi</li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2023 BIO-PELAJAR. All Rights Reserved.
+  </footer>
+
+  <!-- JS NAVBAR -->
+  <script>
+    const links = document.querySelectorAll('nav a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        links.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
